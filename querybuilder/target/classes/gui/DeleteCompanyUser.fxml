@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <GridPane>
+
+        <fx:define>
+            <ToggleGroup fx:id="toggleUserCompany"/>
+        </fx:define>
+        <HBox spacing="20" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-padding: 10 0 0 20">
+            <RadioButton fx:id="radioDeleteUser" text="DeleteUser" toggleGroup="$toggleUserCompany"/>
+            <RadioButton fx:id="radioDeleteCompany" text="DeleteCompany" toggleGroup="$toggleUserCompany"/>
+        </HBox>
+
+        <HBox spacing="20" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-padding: 20">
+            <TextField fx:id="csvFilterAttribute" promptText="Choose a file" prefWidth="150"/>
+            <TextField fx:id="filePath" editable="false" promptText="Choose a file" prefWidth="150"/>
+            <Button fx:id="openFileButton" text="Open File" onAction="#onOpenFileClicked"/>
+        </HBox>
+        <VBox spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-padding: 0 0 10 20">
+            <TextField fx:id="table" promptText="Enter table" prefWidth="150" maxWidth="150"/>
+            <TextField fx:id="modifiedBy" promptText="Modified by" prefWidth="150" maxWidth="150"/>
+            <TextField fx:id="comment4admin" promptText="Enter JIRA Ticket" prefWidth="150" maxWidth="150"/>
+
+            <HBox>
+                <TextField fx:id="attribute" promptText="Enter attribute" prefWidth="150" maxWidth="150"/>
+                <ChoiceBox fx:id="filterChoiceBox" value="In" prefWidth="150"/>
+                <TextField fx:id="filter" promptText="Enter filter" prefWidth="150" maxWidth="150"/>
+            </HBox>
+
+
+
+        </VBox>
+        <HBox spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="3" style="-fx-padding: 0 0 10 20">
+            <Button fx:id="updateButton" text="Update Filters" onAction="#update"/>
+        </HBox>
+
+    </GridPane>
+
+</AnchorPane>

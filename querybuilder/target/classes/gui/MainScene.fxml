@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.MainController"
+            stylesheets="@../styles/styles.css"
+            pannable="true"
+            fitToHeight="true" fitToWidth="true">
+    <StackPane>
+        <BorderPane>
+            <top>
+                <MenuBar>
+                    <Menu text="File">
+                        <MenuItem fx:id="searchQuery" text="Search Query" onAction="#onSearchQueryEditor"/>
+                        <MenuItem fx:id="updateCompanyUser" text="Update Company/User" onAction="#onUpdateCompanyUserEditor"/>
+                        <MenuItem fx:id="deleteCompanyUser" text="Delete Company/User" onAction="#onDeleteCompanyUserEditor"/>
+                        <MenuItem fx:id="insertDomain" text="Insert Domain" onAction="#onInsertDomainEditor"/>
+                        <MenuItem fx:id="deleteDomain" text="Delete Domain" onAction="#onDeleteDomainEditor"/>
+                        <MenuItem fx:id="updateMailDomains" text="Update Mail Domains" onAction="#onUpdateDomainEditor"/>
+                        <MenuItem fx:id="importUserFromCSV" text="Import User From CSV" onAction="#onImportUserFromCsvEditor"/>
+                    </Menu>
+                </MenuBar>
+
+            </top>
+
+            <center>
+                <VBox fx:id="editorPane"/>
+            </center>
+
+            <bottom>
+                <VBox spacing="20">
+
+                    <HBox spacing="20"  style="-fx-padding: 0 0 10 20">
+                        <Button text="Display Query" onAction="#display" />
+                    </HBox>
+
+                    <TextArea fx:id="query" editable="false"/>
+
+                    <Button text="Copy" onAction="#onCopy" />
+
+                </VBox>
+
+            </bottom>
+
+        </BorderPane>
+    </StackPane>
+</ScrollPane>

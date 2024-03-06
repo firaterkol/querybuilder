@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="20">
+        <HBox spacing="20" style="-fx-padding: 0 0 10 0">
+            <ChoiceBox fx:id="joinChoiceBox" value="INNER" prefWidth="100"/>
+            <TextField fx:id="joinTable" promptText="Enter table to join"/>
+            <TextField fx:id="joinPredicateLeft" promptText="Enter left predicate"/>
+            <TextField fx:id="joinPredicateRight" promptText="Enter right predicate"/>
+            <Button fx:id="discardButton" text="X" onAction="#discardJoin"/>
+        </HBox>
+
+</AnchorPane>

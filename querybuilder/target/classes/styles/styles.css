@@ -1,0 +1,9 @@
+.transparent-tab{
+    -fx-background-color: transparent;
+    -fx-padding:1;
+}
+
+.borderless-button{
+    -fx-border-width: 0;
+    -fx-focus-color: transparent;
+}

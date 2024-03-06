@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <GridPane>
+        <HBox spacing="20" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-padding: 20">
+            <TextField fx:id="csvFilterAttribute" promptText="Csv filter attribute" prefWidth="150"/>
+            <TextField fx:id="filePath" editable="false" promptText="Choose a file" prefWidth="150"/>
+            <Button fx:id="openFileButton" text="Open File" onAction="#onOpenFileClicked"/>
+        </HBox>
+        <VBox spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-padding: 0 0 10 20">
+            <TextField fx:id="selectedColumns" promptText="Enter columns" prefWidth="300" maxWidth="300"/>
+            <TextField fx:id="table" promptText="Enter table" prefWidth="150" maxWidth="150"/>
+
+            <FlowPane fx:id="joinPane" orientation="VERTICAL" prefWrapLength="150"/>
+
+            <Button fx:id="joinButton" text="Join" onAction="#addJoin"/>
+            <HBox spacing="20">
+                <TextField fx:id="attribute" promptText="Enter attribute"/>
+                <ChoiceBox fx:id="filterChoiceBox" value="In" prefWidth="150"/>
+                <TextField fx:id="filter" promptText="Enter filter"/>
+            </HBox>
+        </VBox>
+        <HBox spacing="20" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-padding: 0 0 10 20">
+            <Button fx:id="updateButton" text="Update Filters" onAction="#update"/>
+
+        </HBox>
+
+
+    </GridPane>
+
+
+</AnchorPane>
